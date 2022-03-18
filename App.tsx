@@ -16,7 +16,7 @@ import NativeBaseIcon from "./components/NativeBaseIcon";
 
 // Define the config
 const config = {
-  useSystemColorMode: false,
+  useSystemColorMode: true,
   initialColorMode: "dark",
 };
 
@@ -26,6 +26,8 @@ type MyThemeType = typeof theme;
 declare module "native-base" {
   interface ICustomTheme extends MyThemeType {}
 }
+
+// create app wrapper
 export default function App() {
   return (
     <NativeBaseProvider>
